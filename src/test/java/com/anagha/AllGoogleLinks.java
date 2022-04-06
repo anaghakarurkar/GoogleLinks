@@ -20,6 +20,7 @@ public class AllGoogleLinks {
 		driver.get("http://www.google.com");
 		List<WebElement> allGoogleLinks = driver.findElements(By.tagName("a"));
 		
+		// print all links on google.com webpage
 		for(WebElement element: allGoogleLinks)
 		{
 			System.out.println(element.getText() + "-" + element.getAttribute("href"));
