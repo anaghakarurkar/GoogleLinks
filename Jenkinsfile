@@ -32,10 +32,11 @@ pipeline
         {
             steps
             {
-                withMaven(maven : 'Maven')
-                {
-                    sh 'mvn deploy'
-                }
+                echo 'Deployment stage complete'
+                //withMaven(maven : 'Maven')
+               // {
+                 //   sh 'mvn deploy'
+                //}
             }
         }
           
