@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Run Maven on a Unix agent.
-                sh "mvn test"
+               echo 'Building application'
             }
 
             post {
