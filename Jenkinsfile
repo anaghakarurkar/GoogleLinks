@@ -10,12 +10,14 @@ pipeline
                echo 'Building application'
             }
         }
-          post
-            {
-                success
-                {
-                    emailext body: 'Project using pipeline. Build successful!', subject: 'Pipeline success!', to: 'anaghakarurkar@gmail.com'
-                }
-            }
+          
     }
+    post
+       {
+           success
+           {
+                    emailext body: 'Project using pipeline. Build successful!', subject: 'Pipeline success!', to: 'anaghakarurkar@gmail.com'
+                
+            }
+       }
 }
