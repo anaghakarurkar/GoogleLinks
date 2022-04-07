@@ -3,28 +3,37 @@ pipeline
     agent any
     stages 
     {
-        stage('Build') 
+        stage('Compile Stage') 
         {
             steps
             {
-               echo 'Building application'
+                withMaven(maven : 'Maven')
+                {
+                    sh 'mvn clean compile'
+                }
+            }
+            
+        }
+        stage('Testing stage')
+        {
+            steps
+            {
+                withMaven(maven : 'Maven')
+                {
+                    sh 'mvn test'
+                }
             }
         }
-        stage('Test')
+        stage('Deployment stage')
         {
             steps
             {
-                 sh 'mvn test'
+                withMaven(maven : 'Maven')
+                {
+                    sh 'mvn deploy'
+                }
             }
         }
           
     }
-    post
-       {
-           success
-           {
-                    emailext body: 'Project using pipeline. Build successful!', subject: 'Pipeline success!', to: 'anaghakarurkar@gmail.com'
-                
-            }
-       }
 }
