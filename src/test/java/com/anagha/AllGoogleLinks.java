@@ -37,7 +37,7 @@ public class AllGoogleLinks {
 
 	@BeforeClass
 	public void beforeClass() {
-		System.out.println("I am inside beforeClass method() of AllGoogleLinks");
+		System.out.println("I am inside beforeClass method() of AllGoogleLinks ");
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
 		driver = new ChromeDriver();
 	}
