@@ -16,6 +16,7 @@ public class AllGoogleLinks {
 	WebDriver driver;
 //tests
 //new code added
+
 	@Test(groups = "Regression")
 	public void printAllGoogleLinksWithTheirHref() {
 		driver.get("http://www.google.com");
