@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AllGoogleLinks {
 	WebDriver driver;
-
+//tests
 	@Test
 	public void printAllGoogleLinksWithTheirHref() {
 		driver.get("http://www.google.com");
