@@ -31,6 +31,7 @@ public class AllGoogleLinks {
 	public void beforeMethod() {
 	}
 
+	
 	@AfterMethod
 	public void afterMethod() {
 	}
