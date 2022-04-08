@@ -44,6 +44,7 @@ public class AllGoogleLinks {
 
 	@AfterClass
 	public void afterClass() {
+		System.out.println("closing browser");
 		driver.quit();
 	}
 
